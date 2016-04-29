@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarcandoLaRuta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="432-lu-hDj">
+                                <rect key="frame" x="16" y="28" width="288" height="271"/>
+                            </mapView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ra-gF-Dqo">
+                                <rect key="frame" x="16" y="307" width="292" height="75"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="o9f-WJ-K1w"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="432-lu-hDj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ac7-7c-Zba"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9Ra-gF-Dqo" secondAttribute="bottom" constant="186" id="I1f-mT-yVp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ra-gF-Dqo" secondAttribute="trailing" constant="-4" id="Knn-b4-0ys"/>
+                            <constraint firstItem="9Ra-gF-Dqo" firstAttribute="top" secondItem="432-lu-hDj" secondAttribute="bottom" constant="8" symbolic="YES" id="LCU-eC-267"/>
+                            <constraint firstItem="9Ra-gF-Dqo" firstAttribute="leading" secondItem="432-lu-hDj" secondAttribute="leading" id="LdR-o3-mQ2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="432-lu-hDj" secondAttribute="bottom" constant="269" id="ZpG-85-PRB"/>
+                            <constraint firstItem="432-lu-hDj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="e5K-3P-uxL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="432-lu-hDj" secondAttribute="trailing" id="jps-9F-WNk"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="map" destination="432-lu-hDj" id="wks-u1-SrK"/>
+                        <outlet property="picker" destination="9Ra-gF-Dqo" id="b6l-SP-sgG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="349"/>
+        </scene>
+    </scenes>
+</document>
